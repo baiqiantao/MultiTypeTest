@@ -29,6 +29,7 @@ public class LambdaTestActivity extends ListActivity {
 				"迭代，方法引用",};
 		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(Arrays.asList(array))));
 		iv = new ImageView(this);
+		iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
 		iv.setImageResource(R.drawable.icon);
 		getListView().addFooterView(iv);
 	}
