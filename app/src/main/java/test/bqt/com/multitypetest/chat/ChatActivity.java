@@ -60,7 +60,7 @@ public class ChatActivity extends Activity {
 		//一个独立的结构，没有父框架结构
 		adapter.register(BigImage.class, new BigImageViewBinder());
 
-		recyclerView.setLayoutManager(new LinearLayoutManager(this));
+		recyclerView.setLayoutManager(new LinearLayoutManager(this));//new GridLayoutManager(this,2)
 		recyclerView.setAdapter(adapter);
 		assertHasTheSameAdapter(recyclerView, adapter);//断言 recyclerView 使用的是正确的 adapter，可选择性使用
 

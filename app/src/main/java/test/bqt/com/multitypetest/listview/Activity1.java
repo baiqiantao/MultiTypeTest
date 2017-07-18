@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.lv;
+package test.bqt.com.multitypetest.listview;
 
 import android.app.Activity;
 import android.graphics.Color;

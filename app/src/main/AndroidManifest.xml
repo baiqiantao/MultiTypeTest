@@ -17,8 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".lv.Activity1"/>
-        <activity android:name=".lv.Activity2"/>
+        <activity android:name=".listview.Activity1"/>
+        <activity android:name=".listview.Activity2"/>
         <activity android:name=".LambdaTestActivity"/>
         <activity android:name=".normal.NormalActivity"/>
         <activity android:name=".chat.ChatActivity"/>

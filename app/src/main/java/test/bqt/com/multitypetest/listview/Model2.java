@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.lv;
+package test.bqt.com.multitypetest.listview;
 
 // 封装每个条目的数据
 public class Model2 {

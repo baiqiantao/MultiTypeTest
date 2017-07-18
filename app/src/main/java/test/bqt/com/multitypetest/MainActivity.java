@@ -10,8 +10,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import test.bqt.com.multitypetest.lv.Activity1;
-import test.bqt.com.multitypetest.lv.Activity2;
+import test.bqt.com.multitypetest.listview.Activity1;
+import test.bqt.com.multitypetest.listview.Activity2;
 import test.bqt.com.multitypetest.normal.NormalActivity;
 import test.bqt.com.multitypetest.chat.ChatActivity;
 
