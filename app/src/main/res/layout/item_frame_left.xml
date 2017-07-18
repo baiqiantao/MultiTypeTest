@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/Weibo.Frame"
+                tools:ignore="UnusedAttribute, RtlHardcoded, ContentDescription">
+
+    <ImageView
+        android:id="@+id/avatar"
+        style="@style/Weibo.Avatar"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/icon"/>
+
+    <TextView
+        android:id="@+id/username"
+        style="@style/Weibo.Username"
+        android:layout_alignTop="@id/avatar"
+        android:layout_toRightOf="@id/avatar"
+        tools:text="drakeet"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        style="@style/Weibo.SubView"
+        android:layout_alignLeft="@id/username"
+        android:layout_below="@id/username"
+        tools:background="@android:color/darker_gray"
+        tools:layout_height="72dp"/>
+
+    <TextView
+        android:id="@+id/create_time"
+        style="@style/Weibo.CreateTime"
+        android:layout_alignLeft="@id/username"
+        android:layout_below="@id/container"
+        tools:text="2017-7-18 11:53:59 星期二"/>
+
+</RelativeLayout>

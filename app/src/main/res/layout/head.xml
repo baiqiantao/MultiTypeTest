@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#300f">
+
+    <TextView
+        android:id="@+id/holder1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:text="大标题"
+        android:textColor="#f00"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/holder1_time"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="2017-7-17"
+        android:textColor="#000"
+        android:textSize="13sp"/>
+
+</RelativeLayout>
