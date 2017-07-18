@@ -5,10 +5,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+    <!--卧槽，这里的RelativeLayout的宽不能设为wrap_content，否则等价于match_parent-->
     <RelativeLayout
         android:id="@+id/rl_voice_content"
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="20dp"
         android:layout_alignParentRight="true"
         android:background="@android:color/holo_orange_light"
         tools:ignore="UselessParent">
@@ -25,10 +26,11 @@
 
         <ImageView
             android:id="@+id/iv_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/tv_duration"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/icon"/>
     </RelativeLayout>
 </RelativeLayout>

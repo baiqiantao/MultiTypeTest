@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import me.drakeet.multitype.ItemViewBinder;
 import test.bqt.com.multitypetest.R;
 
@@ -35,9 +37,9 @@ public abstract class ChatFrameBinder<T extends ContentModel, H extends ContentH
 	@NonNull
 	@Override
 	protected FrameHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
-		View root= inflater.inflate(R.layout.item_frame_left, parent, false);
-//		if (sendType == ContentModel.SEND_TYPE_OTHERS) root = inflater.inflate(R.layout.item_frame_left, parent, false);
-//		else root = inflater.inflate(R.layout.item_frame_right, parent, false);
+		View root;
+		if (sendType == ContentModel.SEND_TYPE_OTHERS) root = inflater.inflate(R.layout.item_frame_left, parent, false);
+		else root = inflater.inflate(R.layout.item_frame_right, parent, false);
 		ContentHolder subViewHolder = onCreateContentViewHolder(inflater, parent);
 		return new FrameHolder(root, subViewHolder);
 	}
@@ -45,7 +47,7 @@ public abstract class ChatFrameBinder<T extends ContentModel, H extends ContentH
 	@Override
 	@SuppressWarnings("unchecked")
 	protected void onBindViewHolder(@NonNull FrameHolder holder, @NonNull ContentModel model) {
-		holder.avatar.setImageResource(model.user.avatar);
+		Glide.with(holder.avatar.getContext()).load(model.user.avatar).into(holder.avatar);
 		holder.username.setText(model.user.name);
 		holder.createTime.setText(model.createTime);
 		onBindContentViewHolder((H) holder.subViewHolder, (T) model);

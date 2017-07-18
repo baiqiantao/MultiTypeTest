@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.chat.commontype;
+package test.bqt.com.multitypetest.chat.msgtype;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import test.bqt.com.multitypetest.R;
 import test.bqt.com.multitypetest.chat.frame.ContentHolder;
@@ -29,7 +31,8 @@ public class SimpleVoiceViewBinder extends ChatFrameBinder<SimpleVoice, SimpleVo
 	@Override
 	protected void onBindContentViewHolder(ViewHolder holder, SimpleVoice item) {
 		holder.tv_duration.setText(item.duration + "''");
-		holder.iv_icon.setOnClickListener(v -> Toast.makeText(holder.iv_icon.getContext(), "path=" + item.path, Toast.LENGTH_SHORT).show());
+		Glide.with(holder.iv_icon.getContext()).load(item.picPath).into(holder.iv_icon);
+		holder.iv_icon.setOnClickListener(v -> Toast.makeText(holder.iv_icon.getContext(), "picPath=" + item.picPath, Toast.LENGTH_SHORT).show());
 	}
 
 	static class ViewHolder extends ContentHolder {

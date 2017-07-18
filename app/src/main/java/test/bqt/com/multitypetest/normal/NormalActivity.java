@@ -30,7 +30,7 @@ public class NormalActivity extends Activity {
 
 		List<ContentModel> items = new ArrayList<>();
 		for (int i = 0; i < 50; i++) {
-			if (new Random().nextBoolean()) items.add(new SimpleImage(R.drawable.icon));
+			if (new Random().nextBoolean()) items.add(new SimpleImage(i % 2 == 0 ? R.drawable.icon : R.mipmap.ic_launcher));
 			else items.add(new SimpleText("不懂左右逢源，不喜趋炎附势，不会随波逐流"));
 		}
 		adapter.setItems(items);

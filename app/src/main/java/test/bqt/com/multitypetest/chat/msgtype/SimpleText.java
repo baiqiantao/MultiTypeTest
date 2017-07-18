@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.chat.commontype;
+package test.bqt.com.multitypetest.chat.msgtype;
 
 import test.bqt.com.multitypetest.chat.frame.ContentModel;
 import test.bqt.com.multitypetest.chat.User;

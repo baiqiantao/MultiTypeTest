@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.chat.commontype;
+package test.bqt.com.multitypetest.chat.msgtype;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +21,7 @@ public class SimpleTextViewBinder extends ChatFrameBinder<SimpleText, SimpleText
 		View root;
 		if (sendType == ContentModel.SEND_TYPE_OTHERS) root = inflater.inflate(R.layout.item_simple_text_left, parent, false);
 		else root = inflater.inflate(R.layout.item_simple_text_right, parent, false);
-		return new SimpleVoiceViewBinder.ViewHolder(root);
+		return new SimpleTextViewBinder.ViewHolder(root);
 	}
 
 	@Override

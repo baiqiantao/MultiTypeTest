@@ -24,6 +24,9 @@ public abstract class ContentModel {
 	public int msgType;
 	public int sendType;
 	public String createTime;
+	/**
+	 * 所有信息都可以封装到user中
+	 */
 	public User user;
 
 	protected ContentModel(User user, int msgType, int sendType) {

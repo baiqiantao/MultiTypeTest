@@ -1,9 +1,11 @@
-package test.bqt.com.multitypetest.chat.commontype;
+package test.bqt.com.multitypetest.chat.msgtype;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import test.bqt.com.multitypetest.R;
 import test.bqt.com.multitypetest.chat.frame.ContentHolder;
@@ -21,12 +23,12 @@ public class SimpleImageViewBinder extends ChatFrameBinder<SimpleImage, SimpleIm
 		View root;
 		if (sendType == ContentModel.SEND_TYPE_OTHERS) root = inflater.inflate(R.layout.item_simple_image_left, parent, false);
 		else root = inflater.inflate(R.layout.item_simple_image_right, parent, false);
-		return new SimpleVoiceViewBinder.ViewHolder(root);
+		return new SimpleImageViewBinder.ViewHolder(root);
 	}
 
 	@Override
 	protected void onBindContentViewHolder(ViewHolder holder, SimpleImage simpleImage) {
-		holder.simpleImage.setImageResource(simpleImage.resId);
+		Glide.with(holder.simpleImage.getContext()).load(simpleImage.imagePath).into(holder.simpleImage);
 	}
 
 	static class ViewHolder extends ContentHolder {

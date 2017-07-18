@@ -1,4 +1,4 @@
-package test.bqt.com.multitypetest.chat.othertype;
+package test.bqt.com.multitypetest.chat.msgtype;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +24,8 @@ public class BigImageViewBinder extends ItemViewBinder<BigImage, BigImageViewBin
 	
 	@Override
 	protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull BigImage bigImage) {
-		Glide.with(holder.iv_pic.getContext()).load(bigImage.path).into(holder.iv_pic);
-		holder.tv_path.setText(bigImage.path);
+		Glide.with(holder.iv_pic.getContext()).load(bigImage.imagePath).into(holder.iv_pic);
+		holder.tv_path.setText(bigImage.imagePath);
 	}
 	
 	static class ViewHolder extends RecyclerView.ViewHolder {
