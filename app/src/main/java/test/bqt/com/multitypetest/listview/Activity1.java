@@ -50,7 +50,7 @@ public class Activity1 extends Activity {
 		listView.setAdapter(new MyAdapter1(this, mList));//addHeaderView要放在setAdapter之前，而addFooterView放在前后都可以
 		listView.setDivider(new ColorDrawable(Color.RED));
 		listView.setDividerHeight(2);//如果调用了setDivider，也需调用setDividerHeight才行
-		listView.setOnItemClickListener((parent, view, position, id) -> Toast.makeText(this, "position=" + position, Toast.LENGTH_SHORT).show());
+		listView.setOnItemClickListener((parent, view, p, id) -> Toast.makeText(this, "p=" + p + " id=" + id, Toast.LENGTH_SHORT).show());
 
 		setContentView(listView);
 	}
